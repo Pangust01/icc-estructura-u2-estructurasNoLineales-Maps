@@ -1,32 +1,38 @@
 import controllers.Ejercicios;
 import controllers.EmpleadoContoller;
 import controllers.Mapa;
-
 import models.Empleado;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
         // Ejecuta el ejemplo de uso de HashMap con ejemplos sencillos
-        runMapExamlpe();
+        //runMapExample();
 
         // Ejecuta el ejemplo de gestión de empleados usando HashMap
-        runEmpleadoExample();
+        //runEmpleadoExample();
 
         // Ejecuta los ejercicios de sumatoria y anagramas
         runEjerccios();
     }
 
     private static void runEmpleadoExample() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        EmpleadoContoller empleadoContoller = new EmpleadoContoller();
+        empleadoContoller.addempleado(new Empleado(1, "Daniel", "Developer"));
+        empleadoContoller.addempleado(new Empleado(2, "Luis", "Developer"));
+        empleadoContoller.addempleado(new Empleado(3, "Peñafiel", "Tester"));
+        empleadoContoller.addempleado(new Empleado(4, "Antonio", "Analyst"));
+        empleadoContoller.imprimirEmpleados();
     }
 
-    private static void runMapExamlpe() {
-        throw new UnsupportedOperationException("Not implemented yet");
+    private static void runMapExample() {
+        new Mapa();
+        //throw new UnsupportedOperationException("Not implemented yet");
     }
 
     private static void runEjerccios() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        Ejercicios ejer = new Ejercicios();
+        ejer.areAnagrams("listen", "silent");
 
     }
 }
